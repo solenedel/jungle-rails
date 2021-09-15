@@ -1,3 +1,10 @@
+// newly added styles
+
+.order-summary h4.summary {
+  margin-top: 30px;
+  opacity: 0.65;
+}
+
 main section.products-index,
 main section.categories-show {
 
@@ -63,9 +70,7 @@ main section.categories-show {
         color: white;
       }
 
-      .order-summary h4 {
-        color: blue;
-      }
+   
 
       &:hover {
 
