@@ -1,5 +1,18 @@
 // newly added styles
 
+h1.admin-dashboard {
+  color: rgb(82, 146, 189);
+}
+
+.admin-stats {
+  margin-top: 50px;
+}
+
+.admin-stats h3 span {
+  color: rgb(101, 182, 101);
+  padding-left: 7px;
+}
+
 .order-summary h4.thank-you {
   font-size: 30px;
   color: rgb(101, 182, 101);
