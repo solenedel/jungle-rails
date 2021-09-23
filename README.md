@@ -2,8 +2,12 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
-## Known issues:
-- website crashes when admin tries to delete a product
+## Screenshots
+![img1](img/sc_1.png)
+![img2](img/sc_2.png)
+![img3](img/sc_3.png)
+![img4](img/sc_4.png)
+![img5](img/sc_5.png)
 
 ## Additional Steps for Apple M1 Machines
 
