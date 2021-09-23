@@ -60,6 +60,29 @@ RSpec.describe User, type: :model do
       @user = User.new(first_name: 'Apple', last_name: 'Pi', email: 'applepi@mail.com', password: 'goodpassword', password_confirmation: 'goodpassword')
       @user.save!
     end
-    
+
   end
+
 end
+
+# tests for user authentication
+
+describe '.authenticate_with_credentials' do
+
+  it "returns nil if the user does not exist" do
+    @user = User.new(first_name: 'Apple', last_name: 'Pi', email: 'applepi@mail.com', password: 'badpassword', password_confirmation: 'badpassword')
+    @user.save
+    email = 'wrong@mail.com'
+    password = 'wrongpassword'
+    @result = User.authenticate_with_credentials(email, password)
+    expect(@result).to be_nil
+  end
+
+  it "returns the user instance if it does exist" do
+    @user = User.new(first_name: 'Apple', last_name: 'Pi', email: 'applepi@mail.com', password: 'badpassword', password_confirmation: 'badpassword')
+    @user.save
+    email = 'applepi@mail.com'
+    password = 'badpassword'
+    @result = User.authenticate_with_credentials(email, password)
+    expect(@result).to eql(@user)
+  end
