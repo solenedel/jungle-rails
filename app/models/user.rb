@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
 
   # validations
     validates :first_name, :last_name, :email, :password, :password_confirmation, presence: true
+    validates_uniqueness_of :email, case_sensitive: false
     validates_length_of :password, minimum: 8
-    validates_uniqueness_of :email, case-sensitive: false
 
   # user authentication
   def self.authenticate_with_credentials(email, password)
